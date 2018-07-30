@@ -1,0 +1,81 @@
+buildscript {
+	repositories { 
+    	jcenter()
+	}
+	
+	dependencies {
+		classpath 'com.bmuschko:gradle-tomcat-plugin:2.2.5'
+	}
+}
+
+// Apply the java-library plugin to add support for Java Library
+apply plugin: 'java'
+apply plugin: 'war' 
+apply plugin: 'eclipse' 
+apply plugin: "com.bmuschko.tomcat"
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+	mavenLocal()
+    mavenCentral()
+}
+
+jar {
+    baseName = 'com.lacodefy.billient'
+    version = '0.0.1-SNAPSHOT'
+}
+
+dependencies {
+
+    /********************************************************************
+    *							TOMCAT 
+    /********************************************************************/ 
+	def tomcatVersion = '8.0.47'
+    tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
+           "org.apache.tomcat.embed:tomcat-embed-logging-juli:${tomcatVersion}",
+           "org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}" 
+           
+    /********************************************************************
+    *							SPRING FRAMEWORK
+    /********************************************************************/
+    compile "org.springframework:spring-web:${spring}" 
+    compile "org.springframework:spring-webmvc:${spring}"
+    compile "org.springframework:spring-core:${spring}"
+    compile "org.springframework:spring-beans:${spring}"
+    compile "org.springframework:spring-context:${spring}"
+    compile "org.springframework:spring-context-support:${spring}"
+    compile "org.springframework:spring-aop:${spring}"
+    compile "org.springframework:spring-tx:${spring}"
+    compile "org.springframework:spring-orm:${spring}"
+    
+    /*******************************************************************
+    *							SPRING SECURITY 
+    ********************************************************************/
+    compile "org.springframework.security:spring-security-core:${spring_security}"
+    compile "org.springframework.security:spring-security-web:${spring_security}"
+    compile "org.springframework.security:spring-security-config:${spring_security}"
+    
+    /********************************************************************
+    *							SPRING DATA JPA 
+    *********************************************************************/
+    compile "org.springframework.data:spring-data-jpa:${spring_data}"
+    
+    compile 'ch.qos.logback:logback-core:0.9.17'
+ 
+    providedCompile 'javax.servlet:javax.servlet-api:4.0.0'
+
+    compile "org.aspectj:aspectjrt:1.7.4"
+    
+    /********************************************************************
+    *							THYMELEAF 
+    *********************************************************************/
+	//compile "org.thymeleaf:thymeleaf:${thymeleaf}"
+	compile "org.thymeleaf:thymeleaf-spring5:${thymeleaf}"
+	
+	/********************************************************************
+    *							MYSQL
+    *********************************************************************/
+    compile 'mysql:mysql-connector-java:5.0.8'
+ 
+}
+
