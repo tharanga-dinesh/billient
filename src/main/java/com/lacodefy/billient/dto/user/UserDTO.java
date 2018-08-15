@@ -1,11 +1,15 @@
 package com.lacodefy.billient.dto.user;
 
+import com.lacodefy.billient.annotation.ValidEmail;
+
 public class UserDTO {
 
 	private String firstName;
 	private String lastName;
 	private String password;
 	private String matchingPassword;
+
+	@ValidEmail
 	private String email;
 
 	public String getFirstName() {

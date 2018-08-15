@@ -28,7 +28,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 		.failureUrl("/login?error=true")
 		.failureHandler(authenticationFailureHandler())
 		.and()
-		.logout().logoutSuccessUrl("/login?logout");
+		.logout().logoutSuccessUrl("/login?logout")
+		.and()
+		.exceptionHandling().accessDeniedPage("");
 	}
 
 	@Bean
