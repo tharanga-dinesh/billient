@@ -5,15 +5,14 @@
 
 <body class="app sidebar-mini rtl">
 
-	<header class="app-header"
-		th:replace="baseviews/baseheader :: baseheader"></header>
+	<header class="app-header" th:replace="baseviews/baseheader :: baseheader"></header>
 
 	<!-- Sidebar menu-->
 	<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
 
 	<div th:replace="baseviews/basemenu :: leftsidemenu"></div>
 	<main class="app-content">
-		<div th:replace="dashboard/pageheader :: pageHeader"></div>
+		<div th:replace="expenses/pageheader :: pageHeader"></div>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="tile">
