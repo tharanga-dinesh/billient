@@ -9,29 +9,29 @@
       </div>
       <ul class="app-menu">
         <li><a class="app-menu__item active" th:href="@{/}"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
-        <li><a class="app-menu__item" th:href="@{/item}"><i class="app-menu__icon fa fa-cubes"></i><span class="app-menu__label">Items</span></a></li>
+        <li><a class="app-menu__item" th:href="@{/item/}"><i class="app-menu__icon fa fa-cubes"></i><span class="app-menu__label">Items</span></a></li>
         <li class="treeview"><a class="app-menu__item" data-toggle="treeview"><i class="app-menu__icon fa fa-usd"></i><span class="app-menu__label"> Incomes </span><i class="treeview-indicator fa fa-angle-right"></i></a>
           <ul class="treeview-menu">
-            <li><a class="treeview-item" th:href="@{/invoice}"><i class="icon fa fa-file-text-o"></i> Invoice </a></li>
-            <li><a class="treeview-item" th:href="@{/revenue}"><i class="icon fa fa-money"></i> Revenues</a></li>
-            <li><a class="treeview-item" th:href="@{/customer}"><i class="icon fa fa-users"></i> Customers</a></li> 
+            <li><a class="treeview-item" th:href="@{/invoice/}"><i class="icon fa fa-file-text-o"></i> Invoice </a></li>
+            <li><a class="treeview-item" th:href="@{/revenue/}"><i class="icon fa fa-money"></i> Revenue</a></li>
+            <li><a class="treeview-item" th:href="@{/customer/}"><i class="icon fa fa-users"></i> Customer</a></li> 
           </ul>
         </li>
         <li class="treeview"><a class="app-menu__item" data-toggle="treeview"><i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Expenses</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           <ul class="treeview-menu">
-            <li><a class="treeview-item" th:href="@{/bill}"><i class="icon fa fa-files-o"></i> Bills</a></li>
-            <li><a class="treeview-item" th:href="@{/payment}"><i class="icon fa fa-credit-card"></i> Payments</a></li>
-            <li><a class="treeview-item" th:href="@{/vendor}"><i class="icon fa fa-truck"></i> Vendors</a></li> 
+            <li><a class="treeview-item" th:href="@{/bill/}"><i class="icon fa fa-files-o"></i> Bill</a></li>
+            <li><a class="treeview-item" th:href="@{/payment/}"><i class="icon fa fa-credit-card"></i> Payment</a></li>
+            <li><a class="treeview-item" th:href="@{/vendor/}"><i class="icon fa fa-truck"></i> Vendor</a></li> 
           </ul>
         </li>
-        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-university"></i><span class="app-menu__label">Banking</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+        <li class="treeview"><a class="app-menu__item" data-toggle="treeview"><i class="app-menu__icon fa fa-university"></i><span class="app-menu__label">Banking</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           <ul class="treeview-menu">
-            <li><a class="treeview-item" th:href="@{/account}"><i class="icon fa fa-circle-o"></i> Accounts</a></li>
-            <li><a class="treeview-item" th:href="@{/transfer}"><i class="icon fa fa-angle-double-right"></i> Transfers</a></li>
-            <li><a class="treeview-item" th:href="@{/transaction}"><i class="icon fa fa-exchange"></i> Transactions</a></li>
+            <li><a class="treeview-item" th:href="@{/account/}"><i class="icon fa fa-circle-o"></i> Account</a></li>
+            <li><a class="treeview-item" th:href="@{/transfer/}"><i class="icon fa fa-angle-double-right"></i> Transfer</a></li>
+            <li><a class="treeview-item" th:href="@{/transaction/}"><i class="icon fa fa-exchange"></i> Transaction</a></li>
           </ul>
         </li>
-        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-area-chart"></i><span class="app-menu__label">Reports</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+        <li class="treeview"><a class="app-menu__item" data-toggle="treeview"><i class="app-menu__icon fa fa-area-chart"></i><span class="app-menu__label">Reports</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           <ul class="treeview-menu">
             <li><a class="treeview-item" th:href="@{/reports/income}"><i class="icon fa fa-circle-o"></i> Income Summary</a></li>
             <li><a class="treeview-item" th:href="@{/reports/expense}"><i class="icon fa fa-circle-o"></i> Expense Summary</a></li>

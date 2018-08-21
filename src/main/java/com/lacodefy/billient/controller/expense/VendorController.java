@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping(ExpenseController.REQUEST_MAPPING_URL)
-public class ExpenseController {
+@RequestMapping(VendorController.REQUEST_MAPPING_URL)
+public class VendorController {
 
-	public static final String REQUEST_MAPPING_URL = "/expense";
-	private static final String RESOURSE_MAP_PATH = "item/";
+	public static final String REQUEST_MAPPING_URL = "/vendor";
+	private static final String RESOURSE_MAP_PATH = "expense/vendor/";
 
 	@GetMapping("/")
 	public ModelAndView index(final Model model, @ModelAttribute("success") final String success, @ModelAttribute("error") final String error) {
-		final ModelAndView modelAndView = new ModelAndView(ExpenseController.RESOURSE_MAP_PATH + "home-view");
+		final ModelAndView modelAndView = new ModelAndView(VendorController.RESOURSE_MAP_PATH + "home-view");
 		model.addAttribute("success", success);
 		model.addAttribute("error", error);
 		return modelAndView;

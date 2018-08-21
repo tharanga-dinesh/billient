@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml" class="no-js">
+	<div class="app-title" th:fragment="pageHeader">
+		<div>
+			<h1>
+				<i class="fa fa-file-text-o"></i> Invoice
+			</h1> 
+		</div>
+		<ul class="app-breadcrumb breadcrumb">
+			<li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+			<li class="breadcrumb-item">Income</li>
+			<li class="breadcrumb-item"><a th:href="@{/invoice/}">Invoice</a></li>
+		</ul>
+	</div>
+</html>
