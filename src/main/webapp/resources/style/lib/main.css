@@ -177,17 +177,17 @@ a {
 }
 
 a:hover {
-  color: #004a43;
+  color: #fff;
   text-decoration: underline;
 }
 
 a:not([href]):not([tabindex]) {
-  color: inherit;
+  color: #fff;
   text-decoration: none;
 }
 
 a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
-  color: inherit;
+  color: #fff;
   text-decoration: none;
 }
 

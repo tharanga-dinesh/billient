@@ -12,7 +12,7 @@ import com.lacodefy.billient.security.BillientAuthenticationFailureHandler;
 
 @Configuration
 @EnableWebSecurity
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
+public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter{
 
 	@Override
 	protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
