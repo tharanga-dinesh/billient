@@ -14,14 +14,119 @@
 	<main class="app-content">
 		<div th:replace="item/pageheader :: pageHeader"></div>
 		<div class="row">
+			<div class="col-sm-12">
+				<div class="btn-tile">
+					<div class="tile-body">
+						<a type="button" class="btn btn-primary icon-btn" th:href="@{/item/add}"><i class="fa fa-plus"></i> Add </a>
+						<a type="button" class="btn btn-success icon-btn" th:href="@{/item/save}"><i class="fa fa-floppy-o"></i> Save </a>
+						<a type="button" class="btn btn-danger icon-btn" th:if="${item.id != null}" th:href="@{/item/delete(id=${item.id})}"><i class="fa fa-trash"></i> Delete </a>
+						<a type="button" class="btn btn-secondary icon-btn" th:href="@{/item/}"><i class="fa fa-arrow-circle-left"></i> Back </a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
 			<div class="col-md-12">
 				<div class="tile">
-					
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="itemName" class="control-label">Item Name</label>
+								<div class="input-group">
+		                        	<div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-id-card-o"></i></span></div>			                        
+									<input class="form-control" id="itemName" placeholder="Please Specify a Item Name" type="text">
+		                      	</div>								
+							</div>
+						</div> 
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="itemName" class="control-label">SKU</label>
+								<div class="input-group">
+		                        	<div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-key"></i></span></div>			                        
+									<input class="form-control" id="itemName" placeholder="Please Specify a SKU" type="text">
+		                      	</div>								
+							</div>
+						</div> 
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="itemName" class="control-label">Sale Price</label>
+								<div class="input-group">
+		                        	<div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-money"></i></span></div>			                        
+									<input class="form-control" id="itemName" placeholder="Please Specify a Sale Price" type="text">
+		                      	</div>								
+							</div>
+						</div> 
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="itemName" class="control-label">Purchase Price</label>
+								<div class="input-group">
+		                        	<div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-money"></i></span></div>			                        
+									<input class="form-control" id="itemName" placeholder="Please Specify a Purchase Price" type="text">
+		                      	</div>								
+							</div>
+						</div> 
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="itemName" class="control-label">Quantity</label>
+								<div class="input-group">
+		                        	<div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-cubes"></i></span></div>			                        
+									<input class="form-control" id="itemName" placeholder="Please Specify a Quantity" type="text">
+		                      	</div>								
+							</div>
+						</div> 
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="itemName" class="control-label">Tax</label>
+								<div class="input-group">
+		                        	<div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-percent"></i></span></div>			                        
+									<select class="form-control" id="itemTax">
+						                <optgroup label="Select Tax">
+						                  <option value="&nbsp"> </option>
+						                </optgroup>
+					              	</select> 
+		                      	</div>								
+							</div>
+						</div> 
+					</div>
+					<div class="clearfix"></div>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="form-group">
+								<label class="control-label">Category</label>
+								<div class="input-group">
+									<div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-folder-open-o"></i></span></div>
+									<select class="form-control" id="itemCategory">
+						                <optgroup label="Select a Category">
+						                  <option value="&nbsp"> </option>
+						                </optgroup>
+					              	</select> 
+									<div class="input-group-append"><span class="input-group-text"><i class="fa fa-plus"></i></span></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+							<label class="control-label">Is Enabled</label>
+								<div class="toggle">
+									<label>
+										<input type="checkbox"><span class="button-indecator"></span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</main>
 	<div th:replace="baseviews/basejs :: basejs"></div>
+	
+    <script type="text/javascript" th:src="@{/resources/script/lib/plugins/select2.min.js}"></script>
+    
+    <script type="text/javascript" th:src="@{/resources/script/app/item/add-view.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/script/app/item/init.js}"></script>
 
 </body>
 

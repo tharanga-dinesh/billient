@@ -66,6 +66,11 @@ dependencies {
     // https://mvnrepository.com/artifact/com.zaxxer/HikariCP
 	compile group: 'com.zaxxer', name: 'HikariCP', version: '2.7.8'
     
+    /********************************************************************
+    *							HIBERNATE
+    *********************************************************************/
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager
+	compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.3.5.Final'
     
     compile 'ch.qos.logback:logback-core:0.9.17'
  

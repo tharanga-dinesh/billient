@@ -9,20 +9,30 @@
     <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
         <div th:replace="baseviews/basemenu :: leftsidemenu"></div>
 	    <main class="app-content">
-			<div th:replace="income/invoice/pageheader :: pageHeader"></div>
+			<div th:replace="income/invoice/pageheader :: pageHeader"></div>			
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="btn-tile">
+						<div class="tile-body">
+							<a class="btn btn-primary icon-btn" th:href="@{/invoice/add}"><i class="fa fa-plus"></i> Add </a>							
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="tile">
 						<div class="tile-body">
-							<table class="table table-hover table-bordered" id="sampleTable">
+							<table class="table table-hover table-bordered" id="tbl-invoices">
 								<thead>
 									<tr>
-										<th>Name</th>
-										<th>Position</th>
-										<th>Office</th>
-										<th>Age</th>
-										<th>Start date</th>
-										<th>Salary</th>
+										<th>#</th>
+										<th>Customer</th>
+										<th>Amount</th>
+										<th>Invoice Date</th>
+										<th>Due date</th>
+										<th>Status</th> 
+										<th>Actions</th> 
 									</tr>
 								</thead>
 								<tbody>

@@ -12,17 +12,90 @@
 
 	<div th:replace="baseviews/basemenu :: leftsidemenu"></div>
 	<main class="app-content">
-		<div th:replace="income/invoice/pageheader :: pageHeader"></div>
+		<div th:replace="income/invoice/pageheader :: pageHeader"></div><div class="row">
+			<div class="col-sm-12">
+				<div class="btn-tile">
+					<div class="tile-body">
+						<a type="button" class="btn btn-primary icon-btn" th:href="@{/invoice/add}"><i class="fa fa-plus"></i> Add </a>
+						<a type="button" class="btn btn-success icon-btn" th:href="@{/invoice/save}"><i class="fa fa-floppy-o"></i> Save </a>
+						<a type="button" class="btn btn-danger icon-btn" th:if="${invoice.id != null}" th:href="@{/invoice/delete(id=${invoice.id})}"><i class="fa fa-trash"></i> Delete </a>
+						<a type="button" class="btn btn-secondary icon-btn" th:href="@{/invoice/}"><i class="fa fa-arrow-circle-left"></i> Back </a>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="tile">
-					
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="invoiceNumber" class="control-label">Invoice Number</label>
+								<div class="input-group">
+		                        	<div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-file-text-o"></i></span></div>			                        
+									<input class="form-control" id="invoiceNumber" placeholder="Please Specify a Invoice Number" type="text">
+		                      	</div>								
+							</div>
+						</div> 
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="itemName" class="control-label">Invoice Date</label>
+								<div class="input-group">
+		                        	<div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-calendar"></i></span></div>			                        
+									<input class="form-control" id="invoiceDate" placeholder="Please Specify a Invoice Date" type="text">
+		                      	</div>								
+							</div>
+						</div> 
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="invoiceDueDate" class="control-label">Invoice Due</label>
+								<div class="input-group">
+		                        	<div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-calendar"></i></span></div>			                        
+									<input class="form-control" id="invoiceDueDate" placeholder="Please Select a Due Date" type="text">
+		                      	</div>								
+							</div>
+						</div> 
+					</div> 
+					<div class="clearfix"></div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Customer</label>
+								<div class="input-group">
+									<div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></div>
+									<select class="form-control" id="invoiceCustmer">
+						                <optgroup label="Select a Customer">
+						                  <option value="&nbsp"> </option>
+						                </optgroup>
+					              	</select> 
+									<div class="input-group-append"><span class="input-group-text"><i class="fa fa-plus"></i></span></div>
+								</div>
+							</div>
+						</div>  
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="itemName" class="control-label">Currency</label>
+								<div class="input-group">
+		                        	<div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-percent"></i></span></div>			                        
+									<select class="form-control" id="itemTax">
+						                <optgroup label="Select Tax">
+						                  <option value="&nbsp"> </option>
+						                </optgroup>
+					              	</select> 
+		                      	</div>								
+							</div>
+						</div> 
+					</div>
 				</div>
 			</div>
 		</div>
 	</main>
+	
 	<div th:replace="baseviews/basejs :: basejs"></div>
-
+    <script type="text/javascript" th:src="@{/resources/script/lib/plugins/select2.min.js}"></script>
+    
+    <script type="text/javascript" th:src="@{/resources/script/app/income/invoice/add-view.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/script/app/income/invoice/init.js}"></script>
 </body>
 
 </html>

@@ -11641,7 +11641,7 @@ body.stop-scrolling {
           box-sizing: border-box;
   cursor: pointer;
   display: block;
-  height: 40px;
+  height: 32.8833px;
   -moz-user-select: none;
    -ms-user-select: none;
        user-select: none;
@@ -11818,7 +11818,7 @@ body.stop-scrolling {
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
   color: #444;
-  line-height: 37px;
+  line-height: 32px;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__clear {
@@ -11832,7 +11832,7 @@ body.stop-scrolling {
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
-  height: 40px;
+  height: 32px;
   position: absolute;
   top: 1px;
   right: 5px;
@@ -14090,7 +14090,7 @@ be a descendant of the grid when it is being dragged.
           flex-direction: row;
   background-color: #FFF;
   margin: -30px -30px 30px;
-  padding: 20px 30px;
+  padding: 10px 30px;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -14151,16 +14151,17 @@ be a descendant of the grid when it is being dragged.
 }
 
 .tile {
-  position: relative;
-  background: #ffffff;
-  border-radius: 3px;
-  padding: 20px;
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-  margin-bottom: 30px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+	height:100%;
+	position: relative;
+	background: #ffffff;
+	border-radius: 3px;
+	padding: 20px;
+	-webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	margin-bottom: 30px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 @media print {

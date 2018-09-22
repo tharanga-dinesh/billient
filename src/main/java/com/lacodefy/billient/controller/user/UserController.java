@@ -13,7 +13,7 @@ public class UserController {
 
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public String logOutView (final Model model) {
-		return "user/logout";
+		return "login";
 	}
 
 	@RequestMapping(value = "/profile", method = RequestMethod.GET)

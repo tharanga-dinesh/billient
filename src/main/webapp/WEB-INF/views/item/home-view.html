@@ -11,18 +11,29 @@
 	    <main class="app-content">
 			<div th:replace="item/pageheader :: pageHeader"></div>
 			<div class="row">
+				<div class="col-sm-12">
+					<div class="btn-tile">
+						<div class="tile-body">
+							<a class="btn btn-primary icon-btn" th:href="@{/item/add}"><i class="fa fa-plus"></i> Add </a>							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
 				<div class="col-md-12">
 					<div class="tile">
 						<div class="tile-body">
-							<table class="table table-hover table-bordered" id="sampleTable">
+							<table class="table table-hover table-bordered" id="tbl-items">
 								<thead>
 									<tr>
+										<th>#</th>
 										<th>Name</th>
 										<th>Position</th>
 										<th>Office</th>
 										<th>Age</th>
 										<th>Start date</th>
 										<th>Salary</th>
+										<th>Actions</th>
 									</tr>
 								</thead>
 								<tbody>
