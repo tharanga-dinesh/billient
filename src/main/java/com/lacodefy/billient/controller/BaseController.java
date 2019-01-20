@@ -5,5 +5,4 @@ public abstract class BaseController {
 	public String getLevelOne() {
 		return "/BILLIENT";
 	}
-	
 }
